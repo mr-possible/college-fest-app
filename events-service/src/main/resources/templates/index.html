@@ -1,10 +1,10 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcome to College Fest !</title>
-    <!-- Imports for page styling -->
-    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+	<meta charset="UTF-8">
+	<title>Welcome to College Fest !</title>
+	<!-- Imports for page styling -->
+	<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
 </head>
 <body>
 <!-- Do not delete below -->
@@ -16,10 +16,17 @@
 <div th:insert="/navbar::navbar"></div>
 
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <p>Yo Yo Bootstrap !</p>
+    <div class="container-fluid" id="home-gallery-carousel">
+        <div class="carousel-item">
+            <img src="..." alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>...</h5>
+                <p>...</p>
+            </div>
         </div>
+    </div>
+    <div class="-details">
+        <p>Details/ Highlights/ . . .</p>
     </div>
 </div>
 
