@@ -18,6 +18,7 @@ public class Event {
 	private String eventvenue;
 	private String eventorganiser;
 	private String eventorganisercontact;
+	private String eventfee;
 	
 	public String getEventid() {
 		return eventid;
@@ -90,6 +91,14 @@ public class Event {
 	public void setEventtime(String eventtime) {
 		this.eventtime = eventtime;
 	}
+
+	public String getEventfee() {
+		return eventfee;
+	}
+	
+	public void setEventfee(String eventfee) {
+		this.eventfee = eventfee;
+	}
 	
 	@Override
 	public String toString() {
@@ -103,6 +112,7 @@ public class Event {
 			", eventvenue='" + eventvenue + '\'' +
 			", eventorganiser='" + eventorganiser + '\'' +
 			", eventorganisercontact='" + eventorganisercontact + '\'' +
+			", eventfee='" + eventfee + '\'' +
 			'}';
 	}
 }
