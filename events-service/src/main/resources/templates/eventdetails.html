@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<title>Event Details</title>
@@ -7,27 +7,15 @@
 <body>
 <h2>Event details given below :</h2>
 <br /><hr>
-<dl class="row">
-	<h3>Event Id: </h3>
-	<p></p>
-	<h3>Event Name: </h3>
-	<p></p>
-	<h3>Event Category: </h3>
-	<p></p>
-	<h3>Event Description: </h3>
-	<p></p>
-	<h3>Event Date: </h3>
-	<p></p>
-	<h3>Event Time: </h3>
-	<p></p>
-	<h3>Event Venue: </h3>
-	<p></p>
-	<h3>Event Organiser: </h3>
-	<p></p>
-	<h3>Event Organiser Contac: </h3>
-	<p></p>
-	<h3>Event Entry Fee: </h3>
-	<p></p>
-</dl>
+	<h3>Event Id: <span th:text="${event.get().getEventid()}"></span></h3>
+	<h3>Event Name: <span th:text="${event.get().getEventname()}"></span></h3>
+	<h3>Event Category: <span th:text="${event.get().getEventcategory()}"></span></h3>
+	<h3>Event Description: <span th:text="${event.get().getEventdesc()}"></span></h3>
+	<h3>Event Date: <span th:text="${event.get().getEventdate()}"></span></h3>
+	<h3>Event Time: <span th:text="${event.get().getEventtime()}"></span></h3>
+	<h3>Event Venue: <span th:text="${event.get().getEventvenue()}"></span></h3>
+	<h3>Event Organiser: <span th:text="${event.get().getEventorganiser()}"></span></h3>
+	<h3>Event Organiser Contact: <span th:text="${event.get().getEventorganisercontact()}"></span></h3>
+	<h3>Event Entry Fee: <span th:text="${event.get().getEventfee()}"></span></h3>
 </body>
 </html>
