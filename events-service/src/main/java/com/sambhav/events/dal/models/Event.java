@@ -12,7 +12,7 @@ public class Event {
 	private String eventid;
 	private String eventcategory;
 	private String eventname;
-	private String eventdescr;
+	private String eventdesc;
 	private String eventdate;
 	private String eventtime;
 	private String eventvenue;
@@ -43,12 +43,12 @@ public class Event {
 		this.eventname = eventname;
 	}
 	
-	public String getEventdescr() {
-		return eventdescr;
+	public String getEventdesc() {
+		return eventdesc;
 	}
 	
-	public void setEventdescr(String eventdescr) {
-		this.eventdescr = eventdescr;
+	public void setEventdesc(String eventdescr) {
+		this.eventdesc = eventdescr;
 	}
 	
 	public String getEventdate() {
@@ -89,5 +89,20 @@ public class Event {
 	
 	public void setEventtime(String eventtime) {
 		this.eventtime = eventtime;
+	}
+	
+	@Override
+	public String toString() {
+		return "Event{" +
+			"eventid='" + eventid + '\'' +
+			", eventcategory='" + eventcategory + '\'' +
+			", eventname='" + eventname + '\'' +
+			", eventdesc='" + eventdesc + '\'' +
+			", eventdate='" + eventdate + '\'' +
+			", eventtime='" + eventtime + '\'' +
+			", eventvenue='" + eventvenue + '\'' +
+			", eventorganiser='" + eventorganiser + '\'' +
+			", eventorganisercontact='" + eventorganisercontact + '\'' +
+			'}';
 	}
 }
