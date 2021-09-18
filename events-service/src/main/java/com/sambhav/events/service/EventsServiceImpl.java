@@ -5,10 +5,11 @@ import com.sambhav.events.dal.repos.EventRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
-public class EventsServiceImpl implements EventsService{
+public class EventsServiceImpl implements EventsService {
 	
 	@Autowired
 	private EventRepository eventRepository;
@@ -17,5 +18,11 @@ public class EventsServiceImpl implements EventsService{
 	public Optional<Event> getEventDetails(String eventid) {
 		Optional<Event> event = eventRepository.findById(eventid);
 		return event;
+	}
+	
+	@Override
+	public List<Event> getAllEventDetails() {
+		List<Event> allEvents = eventRepository.findAll();
+		return allEvents;
 	}
 }

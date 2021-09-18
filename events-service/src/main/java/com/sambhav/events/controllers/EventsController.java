@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -18,15 +19,16 @@ public class EventsController {
 	@Autowired
 	private EventsService eventsService;
 	
-	@RequestMapping
-	public String viewAllEvents() {
+	@GetMapping
+	public String viewAllEvents(Model model) {
+		List<Event> allEvents = eventsService.getAllEventDetails();
+		model.addAttribute("events", allEvents);
 		return "events";
 	}
 	
 	@GetMapping("/eventdetail/{eventid}")
 	public String getEventDetails(@PathVariable String eventid, Model model) {
 		Optional<Event> event = eventsService.getEventDetails(eventid);
-		System.out.println("$$$$ " + eventsService.getEventDetails(eventid).toString() + " $$$$");
 		model.addAttribute("event", event);
 		return "eventdetails";
 	}
