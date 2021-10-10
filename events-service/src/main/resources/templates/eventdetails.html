@@ -6,7 +6,9 @@
 </head>
 <body>
 <h2>Event details given below :</h2>
-<br /><hr>
+<br/>
+<hr>
+<form th:action="@{/confirm-pass-details}" th:method="post">
 	<h3>Event Id: <span th:text="${event.get().getEventid()}"></span></h3>
 	<h3>Event Name: <span th:text="${event.get().getEventname()}"></span></h3>
 	<h3>Event Category: <span th:text="${event.get().getEventcategory()}"></span></h3>
@@ -17,7 +19,8 @@
 	<h3>Event Organiser: <span th:text="${event.get().getEventorganiser()}"></span></h3>
 	<h3>Event Organiser Contact: <span th:text="${event.get().getEventorganisercontact()}"></span></h3>
 	<h3>Event Entry Fee: <span th:text="${event.get().getEventfee()}"></span></h3>
-	<br />
-	<button type="button" class="btn btn-light">Buy Passes</button>
+	<br/>
+	<button type="submit" th:name="event-id" th:value="${event.get().getEventid()}">Buy Passes</button>
+</form>
 </body>
 </html>
